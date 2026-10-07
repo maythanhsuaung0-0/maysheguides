@@ -1,0 +1,219 @@
+/* Practice panel shown alongside the lecture after selecting Try now. */
+
+.lesson-playground {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  min-width: 0;
+  min-height: 0;
+  height: var(--playground-height, calc(100dvh - 178px));
+  scroll-margin-top: 24px;
+  padding: 0 0 8px 28px;
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+}
+
+.lesson-playground[hidden] {
+  display: none;
+}
+
+.playground-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.playground-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 20px;
+  letter-spacing: -.6px;
+  color: var(--green);
+}
+
+.playground-header h2:focus {
+  outline: none;
+}
+
+.playground-header h2:focus-visible {
+  outline: 2px solid #8ebfac;
+  outline-offset: 5px;
+}
+
+.playground-header .icon-button {
+  color: var(--green);
+}
+
+.playground-instructions {
+  margin-bottom: 24px;
+}
+
+.playground-instructions h3:first-child {
+  margin-top: 0;
+}
+
+.playground-workspace label {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.playground-workspace p {
+  margin: 8px 0 12px;
+  color: var(--green);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.playground-workspace textarea {
+  display: block;
+  width: 100%;
+  min-height: 180px;
+  padding: 15px;
+  border: 1px solid #dbe4d3;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--text);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.8;
+  resize: vertical;
+}
+
+.playground-workspace textarea::placeholder {
+  color: var(--green);
+}
+
+.playground-workspace textarea:focus-visible {
+  outline: 3px solid #8ebfac;
+  outline-offset: 3px;
+}
+
+.playground-quiz {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.playground-quiz > .eyebrow {
+  font-size: 8px;
+}
+
+.playground-quiz h3 {
+  margin: 8px 0 18px;
+  font-size: 17px;
+  letter-spacing: -.4px;
+}
+
+.playground-quiz fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.playground-quiz legend {
+  margin-bottom: 14px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 14px;
+  border: 1px solid #e6ebdf;
+  border-radius: 7px;
+  background: #fff;
+  font-size: 11px;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+.quiz-option:hover {
+  border-color: #abc297;
+}
+
+.quiz-option.selected {
+  border-color: #abc297;
+  background: #edf4e6;
+  color: var(--green);
+}
+
+.quiz-option input {
+  flex-shrink: 0;
+  margin: 0;
+  accent-color: var(--green);
+}
+
+.playground-quiz form > .button {
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+.quiz-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 17px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.quiz-feedback.correct {
+  background: #e8f0df;
+  color: var(--green);
+}
+
+.quiz-feedback.incorrect {
+  background: #f6eee0;
+  color: #aa8653;
+}
+
+.quiz-feedback strong {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 650;
+}
+
+.next-lesson {
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+  .lesson-playground {
+    position: static;
+    height: 70dvh;
+    padding: 28px 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 680px) {
+  .playground-quiz legend {
+    font-size: 11px;
+  }
+
+  .quiz-option {
+    padding: 12px;
+    font-size: 10px;
+  }
+}

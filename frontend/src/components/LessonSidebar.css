@@ -1,0 +1,160 @@
+/* Focused lesson navigation: current topic, lesson links, and a preview of the roadmap. */
+
+.sidebar-focused {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.lesson-navigation {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.lesson-nav-section + .lesson-nav-section {
+  margin-top: 10px;
+}
+
+.lesson-nav-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 10px;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--green);
+  text-align: left;
+  line-height: 1.6;
+  transition: background .2s;
+}
+
+.lesson-nav-toggle:hover,
+.lesson-nav-toggle[aria-expanded="true"] {
+  background: #eef3ec;
+}
+
+.lesson-nav-title {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.lesson-nav-chevron {
+  transition: transform .2s;
+}
+
+.lesson-nav-toggle[aria-expanded="true"] .lesson-nav-chevron {
+  transform: rotate(90deg);
+}
+
+.lesson-subtopics,
+.lesson-roadmap-steps {
+  list-style: none;
+  border-left: 1px solid var(--border);
+  padding: 0 0 0 8px;
+  margin: 10px 0 12px 17px;
+}
+
+.lesson-subtopics li + li,
+.lesson-roadmap-steps li + li {
+  margin-top: 5px;
+}
+
+.lesson-nav-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 7px;
+  border-radius: 6px;
+  color: var(--green);
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.lesson-nav-link:hover {
+  background: #f5f7f3;
+}
+
+.lesson-nav-link.current {
+  background: #edf3e6;
+  font-weight: 600;
+}
+
+.lesson-nav-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  min-height: 20px;
+  flex-shrink: 0;
+  color: #89977a;
+  font-size: 9px;
+}
+
+.lesson-nav-number.complete {
+  color: #8dab73;
+}
+
+.lesson-nav-meta {
+  display: block;
+  margin-top: 3px;
+  color: #89977a;
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.lesson-nav-message {
+  padding: 10px 12px;
+  color: var(--green);
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+.lesson-roadmap-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 7px;
+  color: var(--green);
+  font-size: 10px;
+  line-height: 1.7;
+  cursor: default;
+}
+
+.lesson-roadmap-step > svg {
+  margin-top: 3px;
+  color: #89977a;
+}
+
+.lesson-nav-error {
+  padding: 10px 12px;
+  color: var(--green);
+  font-size: 10px;
+  line-height: 1.9;
+}
+
+.lesson-nav-error button,
+.lesson-nav-retry {
+  display: block;
+  margin-top: 8px;
+  padding: 4px 0;
+  background: transparent;
+  color: var(--green);
+  font-size: 10px;
+  text-decoration: underline;
+}
+
+.lesson-nav-summary {
+  margin-top: auto;
+  padding: 30px 10px 8px;
+}
+
+.lesson-nav-summary p {
+  margin-top: 8px;
+  color: var(--green);
+  font-size: 9px;
+  line-height: 1.9;
+}

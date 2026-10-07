@@ -1,0 +1,136 @@
+/* Sign-in and registration pages, including form fields and password controls. */
+
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 520px;
+  margin: 14px auto 35px;
+  border: 1px solid #e4eadc;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.auth-form-card {
+  padding: 54px 38px;
+}
+
+.auth-form-card h2 {
+  font-size: 25px;
+  letter-spacing: -.9px;
+  font-weight: 800;
+  margin: 10px 0 12px;
+}
+
+.auth-form-card>p {
+  font-size: 11px;
+  color: var(--green);
+  line-height: 1.8;
+}
+
+.auth-form-card form {
+  margin-top: 28px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 19px;
+  color: var(--green);
+}
+
+.form-field>input,
+.password-input {
+  border: 1px solid #e0e7d8;
+  border-radius: 6px;
+  background: #fafbf8;
+  padding: 12px 13px;
+  font-size: 11px;
+}
+
+.form-field input::placeholder {
+  color: var(--green);
+}
+
+.form-field>input:focus,
+.password-input:focus-within {
+  border-color: #91b275;
+  outline: none;
+}
+
+.password-input {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+}
+
+.password-input input {
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 11px;
+  flex: 1;
+  padding: 12px 13px;
+  width: 100%;
+  min-width: 0;
+}
+
+.password-input button {
+  background: transparent;
+  color: #a0b08c;
+  padding: 10px 12px;
+  display: flex;
+}
+
+.password-hint {
+  font-size: 8px !important;
+  color: var(--green);
+  margin-top: -9px;
+  margin-bottom: 23px;
+  line-height: 1.8;
+}
+
+.auth-switch {
+  font-size: 10px !important;
+  text-align: center;
+  margin-top: 23px !important;
+}
+
+.auth-switch a {
+  color: var(--green);
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+@media (max-width: 1100px) {
+  .auth-form-card {
+    padding: 43px 28px;
+  }
+
+  .auth-form-card h2 {
+    font-size: 22px;
+  }
+
+  .auth-grid {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .auth-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .auth-form-card {
+    padding: 30px 25px;
+  }
+
+  .auth-form-card h2 {
+    font-size: 25px;
+  }
+}

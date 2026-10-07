@@ -1,0 +1,154 @@
+/* Classroom layout and lecture content. */
+
+.page-content.page-content-lesson {
+  max-width: none;
+}
+
+.classroom-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.classroom-grid.playground-open {
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 1fr);
+}
+
+.lesson-try-action {
+  margin-top: 28px;
+}
+
+.lesson-article {
+  width: 100%;
+  min-width: 0;
+}
+
+.lesson-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.lesson-article > h1 {
+  font-size: 31px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.4;
+  margin: 13px 0 26px;
+}
+
+.completed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  background: #edf4e6;
+  color: #7d9969;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin: -5px 0 25px;
+}
+
+.markdown {
+  color: #222222;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.markdown h2 {
+  font-size: 22px;
+  color: #36502f;
+  letter-spacing: -0.6px;
+  margin: 30px 0 14px;
+}
+
+.markdown h2:first-child {
+  margin-top: 0;
+}
+
+.markdown h3 {
+  font-size: 16px;
+  color: #546d47;
+  margin: 26px 0 10px;
+}
+
+.markdown p {
+  margin: 12px 0;
+}
+
+.markdown strong {
+  color: #46603b;
+}
+
+.markdown pre {
+  background: #272727;
+  border: 1px solid #e7ecdf;
+  padding: 19px 20px;
+  border-radius: 8px;
+  overflow: auto;
+  margin: 19px 0;
+  line-height: 1.8;
+  font-size: 11px;
+  color: #93cd70;
+}
+
+.markdown code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  background: #f1f4eb;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.markdown pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.markdown a {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 22px;
+}
+
+@media (max-width: 1000px) {
+  .classroom-grid.playground-open {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .lesson-article > h1 {
+    font-size: 28px;
+  }
+
+  .lesson-heading .eyebrow {
+    font-size: 8px;
+  }
+
+  .markdown {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .markdown h2 {
+    font-size: 21px;
+  }
+
+  .markdown h3 {
+    font-size: 16px;
+  }
+
+  .markdown pre {
+    font-size: 10px;
+    padding: 16px 13px;
+  }
+}

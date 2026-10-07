@@ -1,0 +1,75 @@
+/* Loading indicators, empty states, and error states. */
+
+.loading {
+  padding: 70px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #8a9b7c;
+  font-size: 12px;
+  min-height: 230px;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+.empty-state {
+  border: 1px dashed #dbe4d3;
+  border-radius: 12px;
+  background: #fbfcf9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px 25px;
+  text-align: center;
+  color: #809674;
+  min-height: 300px;
+}
+
+.empty-state h2 {
+  font-size: 23px;
+  letter-spacing: -.7px;
+  color: #466140;
+  margin: 19px 0 10px;
+}
+
+.empty-state p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--green);
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+.empty-icon {
+  height: 54px;
+  width: 54px;
+  background: #edf2e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 680px) {
+  .empty-state {
+    padding: 50px 20px;
+  }
+
+  .empty-state h2 {
+    font-size: 23px;
+  }
+
+  .empty-state p {
+    font-size: 11px;
+  }
+}

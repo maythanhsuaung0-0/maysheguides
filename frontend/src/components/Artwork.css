@@ -1,0 +1,146 @@
+/* Course topic illustrations. */
+
+.course-art {
+  height: 155px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #647a5e;
+  background: #e9eddf;
+}
+
+.art-label {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  opacity: .6;
+}
+
+.art-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 67px;
+  height: 67px;
+  border-radius: 16px;
+  background: #ffffff8c;
+  border: 1px solid #ffffff90;
+  transform: rotate(-8deg);
+  box-shadow: 7px 7px 0 #42523912;
+}
+
+.art-icon svg {
+  width: 39px;
+  height: 39px;
+  stroke-width: 1.7;
+}
+
+.art-web {
+  background: #e4edf3;
+  color: #738da5;
+}
+
+.art-design {
+  background: #f0e6dd;
+  color: #b1957b;
+}
+
+.art-data {
+  background: #e9e5f0;
+  color: #9a88ac;
+}
+
+.art-react {
+  background: #e2edec;
+  color: #7d9fa0;
+}
+
+.art-ai {
+  background: #f1eddd;
+  color: #b1a17b;
+}
+
+.react-symbol {
+  position: relative;
+  width: 87px;
+  height: 82px;
+}
+
+.python-symbol {
+  position: relative;
+  width: 75px;
+  height: 73px;
+  transform: rotate(-8deg);
+}
+
+.python-top,
+.python-bottom {
+  position: absolute;
+  display: block;
+  width: 43px;
+  height: 37px;
+  border-radius: 12px 12px 6px 6px;
+  background: #6a8157;
+  box-shadow: 4px 4px 0 #516b3912;
+}
+
+.python-top {
+  top: 1px;
+  left: 14px;
+}
+
+.python-top:after {
+  content: '';
+  position: absolute;
+  width: 29px;
+  height: 25px;
+  left: -14px;
+  top: 19px;
+  border-radius: 13px 0 0 11px;
+  background: #6a8157;
+}
+
+.python-bottom {
+  bottom: 1px;
+  left: 18px;
+  background: #f6f4d6;
+  transform: rotate(180deg);
+}
+
+.python-bottom:after {
+  content: '';
+  position: absolute;
+  width: 29px;
+  height: 25px;
+  left: -14px;
+  top: 19px;
+  border-radius: 13px 0 0 11px;
+  background: #f6f4d6;
+}
+
+.python-symbol i {
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 8px;
+  left: 9px;
+  background: #e9ecd5;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.python-bottom i {
+  background: #7d8e65;
+}
+
+@media (min-width: 1550px) {
+  .course-art {
+    height: 180px;
+  }
+}

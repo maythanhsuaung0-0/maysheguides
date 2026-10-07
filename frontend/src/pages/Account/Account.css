@@ -1,0 +1,83 @@
+/* Account profile, personal information, and account actions. */
+
+.account-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 650px;
+}
+
+.account-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.account-profile .avatar {
+  width: 51px;
+  height: 51px;
+  font-size: 22px;
+}
+
+.account-profile h2 {
+  font-size: 21px;
+  letter-spacing: -.5px;
+}
+
+.account-profile p {
+  font-size: 11px;
+  color: var(--green);
+  margin-top: 5px;
+}
+
+.account-profile>svg {
+  margin-left: auto;
+}
+
+.account-card dl {
+  margin: 0;
+}
+
+.account-card dl>div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  padding: 15px 0;
+  font-size: 12px;
+  gap: 10px;
+}
+
+.account-card dt {
+  color: var(--green);
+}
+
+.account-card dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.account-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.account-actions .button {
+  font-size: 10px;
+}
+
+@media (max-width: 680px) {
+  .account-card {
+    padding: 24px 20px;
+  }
+
+  .account-card dl>div {
+    grid-template-columns: 100px 1fr;
+    font-size: 11px;
+  }
+}

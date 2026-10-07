@@ -1,0 +1,341 @@
+/* Course overview, curriculum, and enrollment panel. */
+
+.course-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 330px;
+  gap: 40px;
+  align-items: start;
+}
+
+.detail-labels {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 14px;
+}
+
+.detail-labels .category-label,
+.detail-labels .level-label {
+  font-size: 10px;
+}
+
+.detail-title {
+  font-size: 36px;
+  line-height: 1.3;
+  letter-spacing: -1.3px;
+  font-weight: 800;
+  max-width: 600px;
+}
+
+.detail-description {
+  font-size: 13px;
+  color: var(--green);
+  line-height: 1.9;
+  margin-top: 16px;
+  max-width: 540px;
+}
+
+.detail-instructor {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin: 24px 0 32px;
+}
+
+.detail-instructor strong {
+  font-size: 11px;
+  display: block;
+}
+
+.detail-instructor small {
+  font-size: 10px;
+  color: #9ca691;
+  display: block;
+  margin-top: 5px;
+}
+
+.progress-pill {
+  font-size: 9px;
+  border-radius: 20px;
+  padding: 7px 11px;
+  background: #edf3e7;
+  color: #7d966c;
+  white-space: nowrap;
+}
+
+.lesson-list {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-bottom: 1px solid #edf0e8;
+}
+
+.lesson-row:last-child {
+  border-bottom: 0;
+}
+
+.lesson-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33px;
+  width: 33px;
+  border-radius: 7px;
+  background: #f4f6f0;
+  color: #a0ab96;
+  font-size: 10px;
+  flex-shrink: 0;
+}
+
+.lesson-row h3 {
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.lesson-row h3 a:hover {
+  color: var(--green);
+}
+
+.lesson-row>div>span {
+  font-size: 9px;
+  color: #a3ad97;
+  margin-top: 4px;
+  display: block;
+}
+
+.lesson-row .lesson-time {
+  margin-left: auto;
+}
+
+.lesson-complete .lesson-number {
+  color: #799b5d;
+  background: #eaf3e0;
+}
+
+.course-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 23px;
+  color: #8e9f7f;
+}
+
+.course-note p {
+  font-size: 10px;
+  color: var(--green);
+  line-height: 1.8;
+}
+
+.course-enroll-card {
+  background: white;
+  border: 1px solid #e2e8dd;
+  border-radius: 12px;
+  overflow: hidden;
+  position: sticky;
+  top: 24px;
+}
+
+.enroll-card-body {
+  padding: 25px;
+}
+
+.enroll-card-body h2 {
+  font-size: 20px;
+  letter-spacing: -.7px;
+  margin: 10px 0;
+}
+
+.enroll-card-body>p {
+  font-size: 11px;
+  color: var(--green);
+  line-height: 1.8;
+}
+
+.enroll-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 11px;
+  color: #879b76;
+  margin: 25px 0;
+}
+
+.enroll-facts span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.enroll-card-body .quiet {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.enroll-card-body>.primary {
+  font-size: 11px;
+}
+
+@media (max-width: 1380px) {
+  .course-detail-grid {
+    gap: 28px;
+    grid-template-columns: minmax(0,1fr) 305px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .course-detail-grid {
+    grid-template-columns: minmax(0,1fr) 265px;
+    gap: 23px;
+  }
+
+  .enroll-card-body {
+    padding: 20px;
+  }
+
+  .enroll-card-body h2 {
+    font-size: 17px;
+  }
+
+  .detail-title {
+    font-size: 29px;
+  }
+
+  .detail-description {
+    font-size: 12px;
+  }
+
+  .lesson-row {
+    gap: 10px;
+    padding: 17px 14px;
+  }
+
+  .lesson-row h3 {
+    font-size: 11px;
+  }
+
+  .course-detail-main .section-heading {
+    flex-wrap: wrap;
+  }
+
+  .enroll-card-body>.primary {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 850px) {
+  .course-detail-grid {
+    grid-template-columns: minmax(0,1fr) 275px;
+  }
+
+  .course-detail-grid .lesson-time {
+    font-size: 8px;
+  }
+
+  .detail-title {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 680px) {
+  .course-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .course-enroll-card {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1;
+    align-items: stretch;
+  }
+
+  .enroll-card-body {
+    padding: 20px 17px;
+  }
+
+  .enroll-card-body h2 {
+    font-size: 16px;
+  }
+
+  .enroll-card-body>p {
+    font-size: 9px;
+  }
+
+  .enroll-card-body .eyebrow {
+    font-size: 7px;
+  }
+
+  .enroll-facts {
+    font-size: 9px;
+    gap: 11px;
+    margin: 16px 0;
+  }
+
+  .enroll-facts svg {
+    width: 14px;
+  }
+
+  .enroll-card-body .button {
+    padding: 10px 8px;
+    font-size: 9px;
+    min-height: 38px;
+    gap: 6px;
+    white-space: normal;
+  }
+
+  .detail-title {
+    font-size: 30px;
+  }
+
+  .detail-description {
+    font-size: 12px;
+  }
+
+  .lesson-row {
+    padding: 17px 16px;
+  }
+
+  .lesson-row h3 {
+    font-size: 12px;
+  }
+
+  .course-detail-grid .lesson-time {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 390px) {
+  .course-enroll-card {
+    grid-template-columns: 1fr;
+  }
+
+  .enroll-card-body {
+    padding: 22px;
+  }
+
+  .enroll-facts {
+    font-size: 11px;
+  }
+
+  .enroll-card-body h2 {
+    font-size: 21px;
+  }
+
+  .enroll-card-body>p {
+    font-size: 11px;
+  }
+
+  .enroll-card-body .button {
+    font-size: 11px;
+  }
+}
